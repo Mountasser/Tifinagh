@@ -16,14 +16,14 @@ function App() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h4>Nombre au Tifinagh </h4>
+      <h4>Nombres en Tifinagh</h4>
 
-      <input {...register('number', { pattern: /^\d*\.?\d*$/ }, { required: true })} />
+      <input {...register('number', { pattern: /^\d*\[.,]?\d*$/ }, { required: true })} />
       {errors.number && <p>Saisir le nombre</p>}
-      <button type="submit" >Convertir en tifinagh</button>
-      {tifinagh && <p>En Tifinagh : {tifinagh} </p>}
+      <button type="submit" >Convertir en Tifinagh</button>
+      {tifinagh && <p>{tifinagh}</p>}
       <footer>
-      <p>&#169;  Attijariwafa bank</p>
+      <p>&#169;2021 Attijariwafa bank</p>
       </footer>
 
     </form>
