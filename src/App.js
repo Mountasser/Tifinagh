@@ -16,12 +16,12 @@ function App() {
 
   return (
     <div className="App">
+    <h4>Nombres en Tifinagh</h4>
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h4>Nombres en Tifinagh</h4>
       <input  {...register('number', { pattern: /^\d*[\.,]?\d*$/ }, { required: true })} />
       <button type="submit" >Convertir en Tifinagh</button>
-      <p>{errors.number ? "Veuillez saisir un nombre valide" : tifinagh}</p>
     </form>
+    <p>{errors.number ? "Veuillez saisir un nombre valide" : tifinagh}</p>
     </div>
   );
 }
