@@ -18,7 +18,7 @@ function App() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <h4>Nombres en Tifinagh</h4>
 
-      <input {...register('number', { pattern: /^\d*\[.,]?\d*$/ }, { required: true })} />
+      <input {...register('number', { pattern: /^\d*[\.,]?\d*$/ }, { required: true })} />
       {errors.number && <p>Saisir le nombre</p>}
       <button type="submit" >Convertir en Tifinagh</button>
       {tifinagh && <p>{tifinagh}</p>}
