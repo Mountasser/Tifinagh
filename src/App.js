@@ -11,7 +11,7 @@ function App() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    setTifinagh(n2w(Number(data.number)));
+    setTifinagh(n2w(data.number));
   }
 
   return (
