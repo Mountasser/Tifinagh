@@ -34,7 +34,7 @@ const nums = {
     '-': "ⵓⵣⴷⵉⵔ"
   };
   export const n2w = (n) => {
-  n= Number(n.toString().replace(',','.'));  
+    n = Number(n.toString().replace(',','.'));  
     if (n < 0) {
       return nums["-"] + ", " + n2w(-1 * n);
     }
@@ -64,12 +64,10 @@ const nums = {
         } else if (n > 1000000000 && n < 1000000000000) {
           return n2w(parseInt(n / 1000000000) * 1000000000) + " ⴷ " + n2w(n % 1000000000);
         } else {
-          return 'too large';
+          return 'Le nombre entré est trop grand !';
         }
       }
     } else {
-  
-  
       let st = n.toString().split(".")
       let a = parseInt(st[0])
       let b = parseInt(st[1])
@@ -82,6 +80,4 @@ const nums = {
         return n2w(parseInt(st[0])) + " " + nums["."] + " " + n2w(parseInt(st[1]));
       }
     }
-  
-  
   }
