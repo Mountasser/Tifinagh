@@ -34,8 +34,7 @@ const nums = {
     '-': "ⵓⵣⴷⵉⵔ"
   };
   export const n2w = (n) => {
-        console.log("n",n);
-  
+  n= Number(n.toString().replace(',','.'));  
     if (n < 0) {
       return nums["-"] + ", " + n2w(-1 * n);
     }
